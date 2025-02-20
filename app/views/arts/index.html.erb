@@ -4,12 +4,14 @@
 
 <h1>Arts</h1>
 
-<div id="arts">
+<div class="row">
   <% @arts.each do |art| %>
+  <div class="col-lg-3">
     <%= render art %>
     <p>
       <%= link_to "Show this art", art %>
     </p>
+  </div>
   <% end %>
 </div>
 

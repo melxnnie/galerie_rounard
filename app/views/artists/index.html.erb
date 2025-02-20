@@ -4,12 +4,14 @@
 
 <h1>Artists</h1>
 
-<div id="artists">
+<div class="row">
   <% @artists.each do |artist| %>
-    <%= render artist %>
-    <p>
-      <%= link_to "Show this artist", artist %>
-    </p>
+    <div class="col-lg-3">
+      <%= render artist %>
+      <p>
+        <%= link_to "Show this artist", artist %>
+      </p>
+    </div>
   <% end %>
 </div>
 
