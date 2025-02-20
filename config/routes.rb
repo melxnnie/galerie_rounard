@@ -13,4 +13,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "arts#index"
+<<<<<<< HEAD
+=======
+
+>>>>>>> c41d32af35d306be1b724f605a250c0b41d35334
 end

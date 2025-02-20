@@ -64,5 +64,11 @@ gem "simple_form", "~> 5.3"
 
 ruby "3.4.1"
 
+<<<<<<< HEAD
 gem "dartsass-rails"
 gem "bootstrap", "~> 5.3.3"
+=======
+
+gem "dartsass-rails"
+gem "bootstrap", "~> 5.3.3"
+>>>>>>> c41d32af35d306be1b724f605a250c0b41d35334
