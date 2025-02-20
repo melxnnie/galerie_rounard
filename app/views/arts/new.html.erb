@@ -1,0 +1,11 @@
+<% content_for :title, "New art" %>
+
+<h1>New art</h1>
+
+<%= render "form", art: @art %>
+
+<br>
+
+<div>
+  <%= link_to "Back to arts", arts_path %>
+</div>
