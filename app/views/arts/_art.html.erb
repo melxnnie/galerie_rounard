@@ -11,7 +11,7 @@
 
   <p>
     <strong>Artist:</strong>
-    <%= art.artist_id %>
+    <%= link_to art.artist.full_name, artist_path(art.artist) if art.artist.present? %>
   </p>
 
   <p>

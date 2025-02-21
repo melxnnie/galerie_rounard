@@ -6,7 +6,7 @@
   <div class="form-inputs">
     <%= f.input :photo %>
     <%= f.input :art_name %>
-    <%= f.association :artist %>
+    <%= f.association :artist, collection: Artist.all, label_method: :full_name, value_method: :id, prompt: "Sélectionner un artiste" %>
     <%= f.input :year %>
     <%= f.input :style %>
     <%= f.input :description %>
