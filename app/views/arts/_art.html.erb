@@ -1,32 +1,14 @@
 <div id="<%= dom_id art %>">
   <p>
-    <strong>Photo:</strong>
     <%= image_tag art.photo, class: "img-fluid" %>
   </p>
 
   <p>
-    <strong>Art name:</strong>
     <%= art.art_name %>
   </p>
 
   <p>
-    <strong>Artist:</strong>
     <%= link_to art.artist.full_name, artist_path(art.artist) if art.artist.present? %>
-  </p>
-
-  <p>
-    <strong>Year:</strong>
-    <%= art.year %>
-  </p>
-
-  <p>
-    <strong>Style:</strong>
-    <%= art.style %>
-  </p>
-
-  <p>
-    <strong>Description:</strong>
-    <%= art.description %>
   </p>
 
 </div>

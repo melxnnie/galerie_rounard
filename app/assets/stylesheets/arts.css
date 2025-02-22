@@ -1,0 +1,62 @@
+.container {
+    width: 100%!important;
+    --bs-gutter-x: 0!important;
+    max-width: 100%!important;
+}
+
+.arts_banner {
+    width: 20vw;
+}
+
+.top-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.top-content_character {
+    width: 8vw;
+    height: auto;
+}
+.top-content_bubble {
+    width: 45vw;
+    height: auto;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1vw;
+    flex-wrap: wrap;
+    margin: 0 100px;
+
+}
+
+.cards img {
+    width: 20vw;
+    border-radius: 1vw;
+    margin-bottom: 1vw;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    width: 20vw;
+    height: fit-content;
+    background-color: white;
+    border-radius: 2vw;
+    border-style: none;
+    padding: 1vw;
+    text-align: center;
+    align-items: center;
+    box-shadow: black;
+    max-width: 300px; /* Ajuste la largeur max des cartes */
+    min-width: 200px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}

@@ -13,6 +13,11 @@
     <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
     <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
 
+    <link rel="stylesheet" href="/home/debian/Galerie_Rounard/app/assets/stylesheets/reset.css">
+    <link rel="stylesheet" href="/home/debian/Galerie_Rounard/app/assets/stylesheets/artists.css">
+    <link rel="stylesheet" href="/home/debian/Galerie_Rounard/app/assets/stylesheets/arts.css">
+    <link rel="stylesheet" href="/home/debian/Galerie_Rounard/app/assets/stylesheets/header.css">
+
     <link rel="icon" href="/icon.png" type="image/png">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/icon.png">
@@ -23,6 +28,31 @@
   </head>
 
   <body>
+    <header>
+      <div class="banner"></div>
+      <%= link_to arts_path do %>
+        <%= image_tag "logo.png", alt: "Logo" %>
+      <% end %>    
+    </header>
+    <div class="ligne-div">
+      <%= image_tag "ligne.svg", class:"ligne"%>
+    </div>
+    <nav>
+      <div class="nav">
+        <div class="bouton">
+          <%= link_to arts_path do %>
+            <%= image_tag "arts_icon.png"%>
+            <p> Arts <p>
+          <% end %>
+        </div>
+        <div class="bouton">
+          <%= link_to artists_path do %>
+            <%= image_tag "artists_icon.png"%>
+            <p> Artistes <p>
+           <% end %>
+        </div>
+      </div>
+    </nav>
     <main class="container">
       <%= yield %>
     </main>

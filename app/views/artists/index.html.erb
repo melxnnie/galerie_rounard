@@ -1,18 +1,23 @@
-<p style="color: green"><%= notice %></p>
+<div class="content">
+  <%= image_tag "arts_banner.png", class:"arts_banner" %>
 
-<% content_for :title, "Artists" %>
+  <div class=top-content>
+    <%= image_tag "rounard.png", class:"top-content_character"%>
+    <%= image_tag "rounard_bubble_artists.png", class:"top-content_bubble"%>
+  </div>
 
-<h1>Artists</h1>
+  <p style="color: green"><%= notice %></p>
 
-<div class="row">
+  <% content_for :title, "Arts" %>
+
+  <div class="cards">
   <% @artists.each do |artist| %>
-    <div class="col-lg-3">
-      <%= render artist %>
-      <p>
-        <%= link_to "Show this artist", artist %>
-      </p>
-    </div>
-  <% end %>
+      <%= link_to artist_path(artist) do %>
+      <div class="card">
+        <%= render artist %>
+      </div>
+      <% end %>
+    <% end %>
 </div>
 
 <%= link_to "New artist", new_artist_path %>
