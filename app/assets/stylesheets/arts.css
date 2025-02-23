@@ -25,11 +25,11 @@
 }
 
 .rounard_bubble_arts {
-    width: 50vw;
+    width: 40vw;
     background-image: url("rounard_bubble_arts2.png");
     background-position: start;
     background-repeat: no-repeat;
-    background-size: 50vw;
+    background-size: 40vw;
     padding: 5vw;
 }
 

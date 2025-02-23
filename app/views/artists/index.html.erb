@@ -16,7 +16,7 @@
   <div class="cards">
   <% @artists.each do |artist| %>
       <%= link_to artist_path(artist) do %>
-      <div class="card">
+      <div class="card card-artist">
         <%= image_tag artist.photo %>
         <%= artist.first_name %>        
         <%= artist.last_name %>

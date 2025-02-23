@@ -1,33 +1,35 @@
 <div id="<%= dom_id artist %>">
-  <p>
-    <%= image_tag artist.photo %>
-  </p>
+  <div class="top-informations">
+    <%= image_tag artist.photo, class:"information-image" %>
+    <div class="informations">
+      <p>
+        <%= artist.first_name %>
+      </p>
 
-  <p>
-    <%= artist.first_name %>
-  </p>
+      <p>
+        <%= artist.last_name %>
+      </p>
 
-  <p>
-    <%= artist.last_name %>
-  </p>
+      <p>
+        <strong>Nationality:</strong>
+        <%= artist.nationality %>
+      </p>
 
-  <p>
-    <strong>Nationality:</strong>
-    <%= artist.nationality %>
-  </p>
+      <p>
+        <strong>Birth year:</strong>
+        <%= artist.birth_year %>
+      </p>
 
-  <p>
-    <strong>Birth year:</strong>
-    <%= artist.birth_year %>
-  </p>
+      <p>
+        <strong>Death year:</strong>
+        <%= artist.death_year %>
+      </p>
+    </div>
+  </div>
 
-  <p>
-    <strong>Death year:</strong>
-    <%= artist.death_year %>
-  </p>
-
-  <p>
-    <%= artist.description %>
-  </p>
-
+  <div class="description">
+    <p>
+      <%= artist.description %>
+    </p>
+  </div>
 </div>
