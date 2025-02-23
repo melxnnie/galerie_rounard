@@ -1,5 +1,36 @@
+body p {
+    font-family: 'FOT-Seurat-Pro-DB', sans-serif;
+    font-size:20px;
+    color: #74664B;
+}
+
+body span {
+    font-family: 'FOT-Seurat-Pro-B', sans-serif!important;
+    font-size:20px;
+    color: #74664B;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-family: 'FOT-Seurat-Pro-DB', sans-serif!important;
+}
+
+.card p {
+    font-family: 'FOT-Seurat-Pro-DB', sans-serif;
+    font-size:20px;
+    color: black;
+}
+
+.card span {
+    font-family: 'FOT-Seurat-Pro-B', sans-serif!important;
+    font-size:20px;
+    color: black;
+}
+
 header {
     display: flex!important;
+
     justify-content: center;
     align-items: center;
     background-color: #8C8067;
@@ -55,4 +86,10 @@ nav img {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.post_bouton {
+    background-color: white;
+    padding: 1vw 2vw;
+    border-radius: 2vw;
 }

@@ -11,4 +11,19 @@
     <%= link_to art.artist.full_name, artist_path(art.artist) if art.artist.present? %>
   </p>
 
+  <p>
+    <strong>Year:</strong>
+    <%= art.year %>
+  </p>
+
+  <p>
+    <strong>Style:</strong>
+    <%= art.style %>
+  </p>
+
+  <p>
+    <strong>Description:</strong>
+    <%= art.description %>
+  </p>
+
 </div>

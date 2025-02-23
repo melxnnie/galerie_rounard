@@ -3,10 +3,11 @@
 
   <div class=top-content>
     <%= image_tag "rounard.png", class:"top-content_character"%>
-    <%= image_tag "rounard_bubble_arts.png", class:"top-content_bubble"%>
+    <div class="rounard_bubble_arts">
+      <span>Bienvenue dans la galerie de Rounard, l'illustre renard marchand !</span><br><br> 
+      <p>Ici, tu trouveras un éventail d'œuvres d'art, que dis-je, de véritables chefs-d'œuvre venant du monde entier ! Malgré ma réputation de filou, tu ne trouveras que d'authentiques trésors ici, oui oui l'ami !<br><br> Profites-en, une occasion pareille ne se présentera pas si tôt...</p>
+    </div>
   </div>
-
-  <p style="color: green"><%= notice %></p>
 
   <% content_for :title, "Arts" %>
 
@@ -14,11 +15,14 @@
     <% @arts.each do |art| %>
       <%= link_to art_path(art) do %>
       <div class="card">
-        <%= render art %>
+        <%= image_tag art.photo, class: "img-fluid" %>
+        <span> <%= art.art_name %></span>
+        <br>
+        <p> <%= art.artist.full_name if art.artist.present? %></p>
       </div>
       <% end %>
     <% end %>
   </div>
 
-  <%= link_to "New art", new_art_path %>
+  <%= link_to "Ajouter art", new_art_path, class:"post_bouton" %>
 </div>

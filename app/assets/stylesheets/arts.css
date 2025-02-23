@@ -5,7 +5,7 @@
 }
 
 .arts_banner {
-    width: 20vw;
+    width: 20%;
 }
 
 .top-content {
@@ -24,6 +24,22 @@
     height: auto;
 }
 
+.rounard_bubble_arts {
+    width: 50vw;
+    background-image: url("rounard_bubble_arts2.png");
+    background-position: start;
+    background-repeat: no-repeat;
+    background-size: 50vw;
+    padding: 5vw;
+}
+
+.texte_bubble {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: start;
+}
+
 .cards {
     display: flex;
     flex-direction: row;
@@ -31,7 +47,6 @@
     gap: 1vw;
     flex-wrap: wrap;
     margin: 0 100px;
-
 }
 
 .cards img {
@@ -54,9 +69,4 @@
     box-shadow: black;
     max-width: 300px; /* Ajuste la largeur max des cartes */
     min-width: 200px;
-}
-
-a {
-    text-decoration: none;
-    color: black;
 }

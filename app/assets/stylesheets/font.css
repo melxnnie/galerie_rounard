@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'FOT-Seurat-Pro-DB';
+    src: url("/home/debian/Galerie_Rounard/app/assets/font/FOT-Seurat-Pro-DB.otf") format("opentype");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FOT-Seurat-Pro-B';
+    src: url("/home/debian/Galerie_Rounard/app/assets/font/FOT-Seurat-Pro-B.woff2") format("woff2"),
+         url("/home/debian/Galerie_Rounard/app/assets/font/FOT-Seurat-Pro-B.woff") format("woff"),
+         url("/home/debian/Galerie_Rounard/app/assets/font/FOT-Seurat-Pro-B.otf") format("opentype"),
+         url("/home/debian/Galerie_Rounard/app/assets/font/FOT-Seurat-Pro-B.otf") format("otf");
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: "FOT-RodinBokutoh Pro M";
+    src: url("/home/debian/Galerie_Rounard/app/assets/font/FOT-RodinBokutoh Pro M.otf");
+}
+
+@font-face {
+    font-family: "FOT-RodinBokutoh Pro EB";
+    src: url("/home/debian/Galerie_Rounard/app/assets/font/FOT-RodinBokutoh Pro EB.otf");
+}

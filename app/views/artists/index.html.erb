@@ -1,23 +1,28 @@
 <div class="content">
-  <%= image_tag "arts_banner.png", class:"arts_banner" %>
+  <%= image_tag "artists_banner.png", class:"artists_banner" %>
 
   <div class=top-content>
     <%= image_tag "rounard.png", class:"top-content_character"%>
-    <%= image_tag "rounard_bubble_artists.png", class:"top-content_bubble"%>
+    <div class="rounard_bubble_artists">
+      <span>Bienvenue dans mon cercle d'artistes, l'ami !</span><br><br>
+      <p>Ici, je te présente les plus grands génies de l'art, ceux dont les œuvres font tourner les têtes et remplissent les musées du monde entier ! Peintres, sculpteurs, visionnaires... Ils sont tous là, et crois-moi, leur talent est indiscutable.<br><br>Alors, ouvre grand les yeux et découvre ces maîtres qui ont marqué l'histoire. Une telle réunion d'artistes, ça ne se voit pas tous les jours ! </p>
+    </div>
   </div>
 
   <p style="color: green"><%= notice %></p>
 
-  <% content_for :title, "Arts" %>
+  <% content_for :title, "Artists" %>
 
   <div class="cards">
   <% @artists.each do |artist| %>
       <%= link_to artist_path(artist) do %>
       <div class="card">
-        <%= render artist %>
+        <%= image_tag artist.photo %>
+        <%= artist.first_name %>        
+        <%= artist.last_name %>
       </div>
       <% end %>
     <% end %>
 </div>
 
-<%= link_to "New artist", new_artist_path %>
+<%= link_to "Ajouter artiste", new_artist_path, class:"post_bouton" %>

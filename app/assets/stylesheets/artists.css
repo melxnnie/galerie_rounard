@@ -1,0 +1,12 @@
+.rounard_bubble_artists {
+    width: 50vw;
+    background-image: url("rounard_bubble_artists2.png");
+    background-position: start;
+    background-repeat: no-repeat;
+    background-size: 50vw;
+    padding: 5vw;
+}
+
+.artists_banner {
+    width: 25%;
+}
