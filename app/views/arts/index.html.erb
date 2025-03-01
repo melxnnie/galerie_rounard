@@ -3,7 +3,8 @@
 
   <div class=top-content>
     <%= image_tag "rounard.png", class:"top-content_character"%>
-    <div class="rounard_bubble_arts">
+    <div class="rounard_bubble">
+      <%= image_tag "rounard_tag.svg", class:"rounard_tag"%>
       <span>Bienvenue dans la galerie de Rounard, l'illustre renard marchand !</span><br><br> 
       <p>Ici, tu trouveras un éventail d'œuvres d'art, que dis-je, de véritables chefs-d'œuvre venant du monde entier ! Malgré ma réputation de filou, tu ne trouveras que d'authentiques trésors ici, oui oui l'ami !<br><br> Profites-en, une occasion pareille ne se présentera pas si tôt...</p>
     </div>
@@ -11,6 +12,7 @@
 
   <% content_for :title, "Arts" %>
 
+<div class="gallery">
   <div class="cards">
     <% @arts.each do |art| %>
       <%= link_to art_path(art) do %>
@@ -23,6 +25,6 @@
       <% end %>
     <% end %>
   </div>
-
-  <%= link_to "Ajouter art", new_art_path, class:"post_bouton" %>
 </div>
+
+<%= link_to "Ajouter art", new_art_path, class:"post_bouton" %>

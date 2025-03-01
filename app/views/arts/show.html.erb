@@ -1,6 +1,61 @@
-<p style="color: green"><%= notice %></p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= content_for(:title) || "Galerie Rounard" %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
 
-<%= render @art %>
+    <%= yield :head %>
+
+    <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
+    <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
+
+    <link rel="stylesheet" href="/home/debian/Galerie_Rounard/app/assets/stylesheets/reset.css">
+    <link rel="stylesheet" href="/home/debian/Galerie_Rounard/app/assets/stylesheets/header.css">
+    <link rel="stylesheet" href="/home/debian/Galerie_Rounard/app/assets/stylesheets/font.css">
+    <link rel="stylesheet" href="/home/debian/Galerie_Rounard/app/assets/stylesheets/show_arts.css">
+
+
+    <%= favicon_link_tag asset_path('logo.svg'), type: 'image/svg+xml' %>
+
+    <%# Includes all stylesheet files in app/assets/stylesheets %>
+    <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+<div id="<%= dom_id @art %>" class="identity">
+  <div class=identity-picture>
+    <%= image_tag @art.photo, class: "img-fluid" %>
+    <%= image_tag "question_mark.png", class:"question-mark"%>
+  <div class="identity-text">
+    <p>
+      <%= @art.art_name %>
+    </p>
+
+    <p>
+      <%= link_to @art.artist.full_name, artist_path(@art.artist) if @art.artist.present? %>
+    </p>
+
+    <p>
+      <strong>Year:</strong>
+      <%= @art.year %>
+    </p>
+
+    <p>
+      <strong>Style:</strong>
+      <%= @art.style %>
+    </p>
+  </div>
+</div>
+  <p>
+    <strong>Description:</strong>
+    <%= @art.description %>
+  </p>
+
+</div>
 
 <div>
   <%= link_to "Edit this art", edit_art_path(@art) %> |

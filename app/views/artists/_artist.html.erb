@@ -1,7 +1,35 @@
-<div id="<%= dom_id artist %>">
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= content_for(:title) || "Galerie Rounard" %></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= yield :head %>
+
+    <%# Enable PWA manifest for installable apps (make sure to enable in config/routes.rb too!) %>
+    <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
+
+    <link rel="stylesheet" href="/home/debian/Galerie_Rounard/app/assets/stylesheets/reset.css">
+    <link rel="stylesheet" href="/home/debian/Galerie_Rounard/app/assets/stylesheets/header.css">
+    <link rel="stylesheet" href="/home/debian/Galerie_Rounard/app/assets/stylesheets/font.css">
+    <link rel="stylesheet" href="/home/debian/Galerie_Rounard/app/assets/stylesheets/artists.css">
+
+
+    <%= favicon_link_tag asset_path('logo.svg'), type: 'image/svg+xml' %>
+
+    <%# Includes all stylesheet files in app/assets/stylesheets %>
+    <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+<div class="informations" id="<%= dom_id artist %>">
   <div class="top-informations">
     <%= image_tag artist.photo, class:"information-image" %>
-    <div class="informations">
+    <div class="identity">
       <p>
         <%= artist.first_name %>
       </p>

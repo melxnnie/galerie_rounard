@@ -24,13 +24,13 @@
     height: auto;
 }
 
-.rounard_bubble_arts {
-    width: 40vw;
-    background-image: url("rounard_bubble_arts2.png");
-    background-position: start;
+.rounard_bubble {
+    position: relative;
+    width: min(800px,75vw);
+    background-image: url("bubble_blank.png");
     background-repeat: no-repeat;
-    background-size: 40vw;
-    padding: 5vw;
+    background-size: 100% 100%;
+    padding: 2vw 5vw;
 }
 
 .texte_bubble {
@@ -40,13 +40,31 @@
     text-align: start;
 }
 
+.rounard_tag {
+    position: absolute;
+    top: 0;
+    left: 5%;
+    margin-top: -2vw;
+}
+
 .cards {
+    display: block;
+    width: 100%;
+    columns: auto min(95vw, 300px);
+    text-align: center;
+    column-gap: 24px;
+    padding: 0 200px;
+}
+
+.cards a {
+    display: block;
+    break-inside: avoid;
+    margin-bottom: 24px;
+}
+
+.gallery {
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    gap: 1vw;
-    flex-wrap: wrap;
-    margin: 0 100px;
 }
 
 .cards img {
@@ -56,9 +74,9 @@
 }
 
 .card {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    width: 20vw;
+    width: min(95vw, 300px);
     height: fit-content;
     background-color: white;
     border-radius: 2vw;
@@ -66,7 +84,5 @@
     padding: 1vw;
     text-align: center;
     align-items: center;
-    box-shadow: black;
-    max-width: 300px; /* Ajuste la largeur max des cartes */
-    min-width: 200px;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
 }
